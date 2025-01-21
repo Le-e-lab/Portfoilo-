@@ -438,7 +438,7 @@ footer ul li a{
 
     header{
         padding: 1rem 5rem;
-        gap:7rem;
+        gap: 5rem;
     }
 
     header .logo{
@@ -447,6 +447,7 @@ footer ul li a{
 
     .about-container img{
         width: 50vw;
+        margin-top: 5.5rem;
     }
     .input-box input{
         padding: 0.5rem 3rem;
