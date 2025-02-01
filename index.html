@@ -14,7 +14,7 @@
 
     <ul class="nav-links">
         <li>
-            <a href="#about">About</a>
+            <a href="#about">Home</a>
         </li>
         <li>
             <a href="#skills">Skills</a>
@@ -51,7 +51,7 @@
 
             <div class="btn-group">
                 <div class="btn" id="d-btn"><a href=".\Sample_Resume_Template.pdf">Download CV</a></div>
-                <div class="btn" id="C-btn">Contact</div>
+                <div class="btn" id="C-btn"><a href="mutsambiwalesley"></a>Contact</div>
             </div>
 
             <div class="socials">
@@ -68,7 +68,7 @@
 
 <section id="skills" class="skills container">
     <h1 class="section-title">
-        About Me
+        Skills
     </h1>
     <div class="holder-blue">
         <div class="left-column">
@@ -91,6 +91,7 @@
                 <li>Ruby</li>
             </ul>
         </div>
+
         <div class="right-column">
             <h3>A bit about me</h3>
             <p>
@@ -103,6 +104,9 @@
                   I love taking on new challenges and continuously
                    expanding my knowledge.
             </p>
+
+            <h3>Education</h3>
+            <p>Bachelor of Science Honors in Computer Science, Africa University</p>
         </div>
     </div>
 </section>
@@ -116,9 +120,14 @@
 
         
         <div class="project-card">
-            <img src="image\project1.jpg" alt="">
-            <h3>Project Name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel orci vel ipsum dapibus tristique et ut felis.</p>
+            <img src="image\project1.png" alt="">
+            <h3>E-Commence Website</h3>
+            <p>This project is a fully functional e-commerce 
+                website designed to provide a seamless shopping experience. 
+                Built with a modern tech stack, it includes features such as
+                 product browsing, user authentication, a shopping cart,
+                  secure checkout, and an intuitive admin panel
+                   for managing products and orders.</p>
             <div class="btn-group">
                 <div class="btn">Live Demo</div>
                 <div class="btn">Github Repo</div>
@@ -126,9 +135,15 @@
         </div>
 
         <div class="project-card">
-            <img src="image\project1.jpg" alt="">
-            <h3>Project Name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel orci vel ipsum dapibus tristique et ut felis.</p>
+            <img src="image\project2.png" alt="">
+            <h3>AI Chatbot</h3>
+            <p>This project is an AI-powered chatbot designed to provide
+                 automated responses and assist users with various tasks.
+                  The chatbot leverages Natural Language Processing (NLP)
+                   to understand user queries and generate relevant
+                    responses. It can be integrated into websites,
+                     customer service platforms, or messaging apps to
+                      enhance user engagement and automate support.</p>
             <div class="btn-group">
                 <div class="btn">Live Demo</div>
                 <div class="btn">Github Repo</div>
@@ -136,9 +151,15 @@
         </div>
 
         <div class="project-card">
-            <img src="image\project1.jpg" alt="">
-            <h3>Project Name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel orci vel ipsum dapibus tristique et ut felis.</p>
+            <img src="image\project3.png" alt="">
+            <h3>Real-time ChatApp</h3>
+            <p>This project is a real-time chat application designed to
+                 enable seamless communication between users. 
+                 It features instant messaging, real-time updates, 
+                 and user authentication, making it ideal for personal
+                  or business communication. The app supports one-on-one
+                   chats, group conversations, and media sharing for an
+                    engaging user experience.</p>
             <div class="btn-group">
                 <div class="btn">Live Demo</div>
                 <div class="btn">Github Repo</div>
@@ -154,11 +175,21 @@
         <h2 class="section-title">Contact Me</h2>
 
         <div class="input">
-            <input type="text" placeholder="example@email.com">
+            <form class="form-input" action="https://formsubmit.co/mutsambiwalesley@gmail.com" method="POST">
+                    <div class="T-input">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="youremail@gmail.com" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                   
+                   <div class="text-input">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button class="btn-send" type="submit"><i class="fa-solid fa-envelope"></i></button>
+                   </div>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+           </form> 
         </div>
-        
-
-        <div class="btn"> <i class="fa-solid fa-envelope"></i>  Submit</div>
 
            
        
