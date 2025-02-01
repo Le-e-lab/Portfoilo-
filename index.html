@@ -3,107 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesley Mutsambiwa</title>
     <link rel="stylesheet" href="style/styles.css">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Lesley</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-     <header class="header">
 
-        <a href="#" class="logo"></a>
-        
-        <nav class="nav">
+<header class="header">
+    <a href="#" class="logo"><span>Lesley Mutsambiwa</span></a>
+
+    <ul class="nav-links">
+        <li>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+    <button class="visit-btn" >Vist Github</button>
+</header>
+
+<section id="about" class="about">
+    <div class="about-container">
+        <img src="image\me.jpg" alt="">
+
+        <div class="info-box">
+
+            <div class="text">
+                <h3>Hi, I'm</h3>
+                <h1>Lesley Mutsambiwa</h1>
+                <span>Fullstack Developer</span>
+                <h4><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clip-rule="evenodd"/>
+                  </svg>
+                </h4>
+                <h4>  Harare,Zimbabwe</h4>
+            </div>
+
+            <div class="btn-group">
+                <div class="btn" id="d-btn"><a href=".\Sample_Resume_Template.pdf">Download CV</a></div>
+                <div class="btn" id="C-btn">Contact</div>
+            </div>
+
+            <div class="socials">
+                <a href="https://github.com/Le-e-lab"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lesley-mutsambiwa/"><i class="fa-brands fa-linkedin"></i></a>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</section>
+
+<section id="skills" class="skills container">
+    <h1 class="section-title">
+        About Me
+    </h1>
+    <div class="holder-blue">
+        <div class="left-column">
+            <h3>Frontend</h3>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>C#</li>
             </ul>
-        </nav>
-    </header>
+            <h3>Backend</h3>
+            <ul>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>PHP</li>
+                <li>Ruby</li>
+            </ul>
+        </div>
+        <div class="right-column">
+            <h3>A bit about me</h3>
+            <p>
+                I’m a passionate aspiring full-stack developer,
+                 always eager to learn and improve. 
+                 I specialize in building dynamic web applications and enjoy exploring
+                  both front-end and back-end technologies. 
+                  With a strong foundation in programming and a keen interest in problem-solving, 
+                  I’m working towards becoming a versatile and skilled developer. 
+                  I love taking on new challenges and continuously
+                   expanding my knowledge.
+            </p>
+        </div>
+    </div>
+</section>
 
-    <!-- Main Body -->
-     <section class="Content">
-        <div class="Sidebar">
 
-            <div class="Img-box">
-                <img src="image\me.jpg">
-                <h3>Lesley Mutsambiwa</h3>
-                <h3>Full<span>Stack</span> Develper</h3>
+<section id="projects" class="projects">
+
+    <h2 class="section-title">Recent Projects</h2>
+
+    <div class="projects-grid">
+
+        
+        <div class="project-card">
+            <img src="image\project1.jpg" alt="">
+            <h3>Project Name</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel orci vel ipsum dapibus tristique et ut felis.</p>
+            <div class="btn-group">
+                <div class="btn">Live Demo</div>
+                <div class="btn">Github Repo</div>
             </div>
-            
-            <div class="Main-content">
-                <h1>About Me</h1>
-                <p>Am an inspiring developer curtainly working on my 
-                    Frontend skills beginning with web development and
-                    using learning JavaScript in WebDev.
-                </p>
-            </div>
-
-            <div class="Contact">
-                <div class="Info">
-                    <h3>Contact Info</h3>
-                    <p>Phone: Landline</p>
-                    <p>Address: Office address/Base of Operations</p>
-                </div>
-
-                <div class="ContactWebs">
-                    <a href="#"><i class="icon"><box-icon type='logo' name='gmail'></box-icon></i></a>
-                    <a href="https://github.com/Le-e-lab"><i class="icon"><box-icon type='logo' name='github'></box-icon></i></a>
-                    <a href="https://www.linkedin.com/in/lesley-mutsambiwa-a2bb1132a/"><i class="icon"><box-icon name='linkedin' type='logo'></box-icon></i></a>
-                    <a href="https://www.instagram.com/duh.its_l.e.s/"><i class="icon"><box-icon name='instagram' type='logo'></box-icon></i></a>
-                    <a href="#"><i class="icon"><box-icon name='twitter' type='logo'></box-icon></i></a>
-                </div>
-            </div>
-
         </div>
 
-        <div class="Main-Content">
-            <div>
-                <div class="Intro">
-                    <h1>Welcome, You</h1>
-                <h2>To My <span>World</span></h2>
-                </div>
-
-                <!-- <p>Checkout some of my work</p> -->
-
-                <div class="Projects">
-                <div class="Proj">
-                    <h3>Project 1</h3>
-                    <p>Later Data</p>
-                    <a href="https://le-e-lab.github.io/Portfoilo-/"><i class="icon"><box-icon type='logo' name='github'></box-icon></i></a>
-
-                </div> 
-                <div class="Proj">
-                    <h3>Project 2</h3>
-                    <p>Later Data</p>
-                    <a href="#"><i class="icon"><box-icon type='logo' name='github'></box-icon></i></a>
-                </div>
-                <div class="Proj">
-                    <h3>Project 3</h3>
-                    <p>Later Data</p>
-                    <a href="#"><i class="icon"><box-icon type='logo' name='github'></box-icon></i></a>
-                </div>
+        <div class="project-card">
+            <img src="image\project1.jpg" alt="">
+            <h3>Project Name</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel orci vel ipsum dapibus tristique et ut felis.</p>
+            <div class="btn-group">
+                <div class="btn">Live Demo</div>
+                <div class="btn">Github Repo</div>
             </div>
-            <div class="Close">
-                <h1>Seen the work</h1>
-                <p>That's not all still more to come am gonna keep growing
-                    expanding my fields real wanna build something that i 
-                    will use and say I made or helped in the making of this.
-                </p>
-                <div class="btnbox">
-                    <a href="#" class="btn">Say hi</a>
-                    <a href="#" class="btn">Hire</a>
-                </div>
-            </div>
-            
         </div>
-        <footer class="footer">
-            <p>Copyright &copy; 2024 Lesley Mutsambiwa. All rights reserved.</p>
-        </footer>
 
-     </section>
-    
+        <div class="project-card">
+            <img src="image\project1.jpg" alt="">
+            <h3>Project Name</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel orci vel ipsum dapibus tristique et ut felis.</p>
+            <div class="btn-group">
+                <div class="btn">Live Demo</div>
+                <div class="btn">Github Repo</div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="input-box">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="input">
+            <input type="text" placeholder="example@email.com">
+        </div>
+        
+
+        <div class="btn"> <i class="fa-solid fa-envelope"></i>  Submit</div>
+
+           
+       
+    </div>
+</section>
+
+<footer>
+
+    <ul>
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+
+    <p class="copyrights">© All Rights Reserved | Lesley Mutsambiwa</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
