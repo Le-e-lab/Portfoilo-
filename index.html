@@ -66,11 +66,11 @@
 
 </section>
 
-<section id="skills" class="skills container">
+<section id="skills" class="skills">
     <h1 class="section-title">
         Skills
     </h1>
-    <div class="holder-blue">
+    <div class="skills-container">
         <div class="left-column">
             <h3>Frontend</h3>
             <ul>
@@ -170,19 +170,27 @@
 </section>
 
 <section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
     <div class="input-box">
 
-        <h2 class="section-title">Contact Me</h2>
 
         <div class="input">
             <form class="form-input" action="https://formsubmit.co/mutsambiwalesley@gmail.com" method="POST">
                     <div class="T-input">
+                        <label for="name">Name:</label>
                         <input type="text" name="name" placeholder="Your Name" required>
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" name="phone" placeholder="Your Phone Number" required>
+                        <label for="email">Email:</label>
                         <input type="email" name="email" placeholder="youremail@gmail.com" required>
+                        <label for="subject">Subject:</label>
                         <input type="text" name="subject" placeholder="Subject" required>
                     </div>
                    
                    <div class="text-input">
+                    <label for="message">Message:</label>
                     <textarea name="message" placeholder="Your Message" required></textarea>
                     <button class="btn-send" type="submit"><i class="fa-solid fa-envelope"></i></button>
                    </div>
