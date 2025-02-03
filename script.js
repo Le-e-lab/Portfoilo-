@@ -21,3 +21,10 @@ const fileLink = "id=109LRY3zNTwtNJSIhnPXnK6MJINX-3I52&export=download&authuser=
 downloadBtn.addEventListener('click', () => {
     window.location.href = fileLink
 });
+
+function changeColor() {
+    const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
+    document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+}
+
+setInterval(changeColor, 2000);
