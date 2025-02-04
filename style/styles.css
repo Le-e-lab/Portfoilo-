@@ -73,6 +73,12 @@ header {
                 &:hover{
                     transform: scale(1.1);
                 }
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 100%;
+                }
             }
 
             .logo-text{
@@ -238,10 +244,6 @@ header {
         }
 
     }
-   
-
-
-
 
 section{
     padding: 10px;
@@ -346,6 +348,21 @@ section{
             gap: 1rem;
             justify-content: center;
             align-items: center;
+
+            .visit-btn{
+                background-color: var(--base-800);
+                color: var(--base-100);
+                padding: 10px 20px;
+                border-radius: 5cap;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+
+                &:hover{
+                    background-color: var(--purple-400);
+                    transform: scale(1.2);
+                    transform: translateY(-2px);
+                }
+            }
 
             .button{
                 background-color: var(--base-800);
@@ -575,6 +592,7 @@ section{
         overflow: hidden;
         overflow: scroll;
         scroll-behavior: smooth;
+        scrollbar-width: none;
         height: 80vh;
         justify-content: center;
     }
@@ -583,6 +601,8 @@ section{
         padding: 5%;
         margin-bottom: 5%;
         padding-bottom: 5%;
+        scrollbar-width: none;
+
     }
 
     @media (max-width:600px) {
@@ -591,6 +611,8 @@ section{
         overflow: hidden;
         overflow: scroll;
         scroll-behavior: smooth;
+        scrollbar-width: none;
+
     }
     
 }
@@ -698,6 +720,8 @@ section{
             grid-template-columns: repeat(1, 1fr);
             justify-content: center;
             overflow: scroll;
+            scrollbar-width: none;
+
         }
 
         @media (max-width:768px) {
@@ -705,6 +729,8 @@ section{
             overflow: hidden;
             overflow: scroll;
             scroll-behavior: smooth;
+            scrollbar-width: none;
+
         }
     
         @media (max-width:600px) {
@@ -712,14 +738,16 @@ section{
             overflow: hidden;
             overflow: scroll;
             scroll-behavior: smooth;
+            scrollbar-width: none;
+
         }
     }
 
     @media (max-width:768px) {
-        overflow: hidden;
-        overflow: scroll;
         scroll-behavior: smooth;
         padding: 2%;
+        scrollbar-width: none;
+
     }
 
     @media (max-width:600px) {
@@ -731,6 +759,77 @@ section{
     @media (max-width:1024px) {
         height: 90vh;
         justify-content: center;
+    }
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* form */
+
+.contact-form {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: #222;
+    padding: 4%;
+    border-radius: 5cap;
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    max-width: 400px;
+    gap: 1rem;
+}
+
+.contact-form h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--purple-400);
+    margin-bottom: 2%;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 3%;
+    margin: 10px 0;
+    border: none;
+    gap: 1rem;
+    border-radius: 5cap;
+    resize: none;
+}
+
+.contact-form button {
+    background: var(--purple);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5cap;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: var(--purple-400);
+}
+
+.close-btn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 110px;
+    right: 250px;
+
+    @media (max-width:1024px) {
+        top: 150px;
+        right: 20px;
     }
 }
 

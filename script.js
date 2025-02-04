@@ -31,6 +31,29 @@ function changeBackgroundColor() {
 
 document.addEventListener("DOMContentLoaded", changeBackgroundColor);
 
+function openContactForm() {
+    document.getElementById("contactForm").style.display = "flex";
+}
+
+function closeContactForm() {
+    document.getElementById("contactForm").style.display = "none";
+}
+
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let mailtoLink = `mailto:mutsambiwalesley@gmail.com?subject=Message from ${name}&body=${message} (From: ${email})`;
+    
+    window.location.href = mailtoLink;
+
+    closeContactForm(); // Close form after sending
+});
+
+
 
 // function changeBackgroundColor() {
 //     const colors = ["#1e3a8a", "#065f46", "#b91c1c", "#7c3aed", "#f59e0b", "#14b8a6", "#4ade80"]; // Customize colors here
