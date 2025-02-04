@@ -138,15 +138,15 @@ header {
                 justify-content: center;
                 width: 150px;
                 height: 50px;
-                background-color: var(--base-100);
-                color: var(--base-800);
+                background: linear-gradient(to right, var(--purple-400),var(--blue));
+                color: var(--base-100);
                 border-radius: 5cap;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
                 text-decoration: none;
 
                 &:hover{
-                    background-color: var(--purple-100);
+                    background: linear-gradient(to right, var(--blue), var(--purple-400));
                 } 
 
                 &:active{
@@ -189,11 +189,7 @@ header {
 section{
     padding: 10px;
     transition: background-color 0.3s ease;
-    border-bottom: 1px solid var(--purple);
-
-    @media (max-width:1024px){
-		
-	}
+    height: 100vh;
 
     @media (max-width:768px){
         padding-bottom:5%;
@@ -216,15 +212,15 @@ section{
     text-align: center;
     height: 100vh;
     padding-top: 5%;
-    gap: 1rem;
+    gap: 5rem;
 
     .home-image{
         width: 30%;
         img{
             max-width: 100%;
-            height: 400px;
+            height: 450px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 5cap;
 
             &:hover{
                 transform: scale(1.2);
@@ -247,9 +243,9 @@ section{
         }
 
         @media (max-width:768px) {
-            margin-right: 17%;
+            margin-left:2%;
             height: auto;
-            width: 50%;
+            width: 40%;
             margin-bottom: 1%;
         }
 
@@ -273,9 +269,10 @@ section{
         }
 
         .Name{
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--purple-100);
+            background: linear-gradient(to right, rgb(255, 0, 255), rgb(0,157,255));
+            background-clip: text;
+            color: transparent;
+            font-size: 2rem;
         }
         h2{
             font-size: 1.5rem;
@@ -333,11 +330,10 @@ section{
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-bottom: 1%;
-            margin-top: 20%;
         }
 
         @media (max-width:600px) {
+            flex-direction: column;
             margin-bottom: 2%;
         }
     }
@@ -345,7 +341,19 @@ section{
     @media (max-width:1024px){
         gap: 0;
         height: 100vh;
-       
+        margin-right: 10%;
+    }
+
+    @media (max-width:768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    @media (max-width:600px) {
+        flex-direction: column;
+        margin-top: 10%;
     }
 }
 
@@ -355,7 +363,7 @@ section{
     align-items: center;
     height: 100vh;
     gap: 1rem;
-    padding-top: 8%;
+    padding: 8% 4%;
 
 
     h1{
@@ -487,18 +495,30 @@ section{
             flex-direction: column;
         }
         @media (max-width:768px) {
+            padding:0px ;
             flex-direction: column;
             grid-template-columns: repeat(1, 1fr);
             height: 100%;
             gap: 1rem;
+            margin-top: 1%;
         }
         @media (max-width:600px) {
             flex-direction: column;
             grid-template-columns: repeat(1, 1fr);
             gap: 1rem;
             height: 100%;
+            margin-top: 1%;
         }
 
+    }
+    @media (max-width:1024px) {
+        padding: 0;
+        gap: 0;
+        overflow: hidden;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        height: 80vh;
+        justify-content: center;
     }
 
     @media (max-width:768px) {
@@ -521,9 +541,9 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5%;
-    padding-top: 8%;
-    gap: 0.1rem;
+    padding: 8% 4%;
+    gap: 4rem;
+    height: 100vh;
 
     h1{
         border-bottom: 1px solid var(--purple-100);
@@ -531,51 +551,39 @@ section{
         font-size: 2.5rem;
         font-weight: bold;
         color: var(--purple-100);
-        margin-bottom: 0.5rem;
     }
 
     .projects-container{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        
 
         .project{
-            flex: 1;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            border-radius: 10%;
+            border-radius: 5cap;
             transition: background-color 0.3s ease;
-            height: 80vh;
+            height: 50vh;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 2%;
             cursor: pointer;
 
-            img{
-                max-width: 80%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 10%;
-                transition: transform 0.3s ease;
-                cursor: pointer;
-                padding-bottom: 2%;
-
-                &:hover{
-                    transform: scale(1.1);
-                }
-            }
-
             h2{
                 font-size: 1.5rem;
                 font-weight: bold;
                 color: var(--purple-100);
+
             }
 
             p{
                 font-size: 1rem;
-                color: var(--base-800);
+                color: var(--purple-100);
                 font-weight: 500;
                 letter-spacing: 1px;
                 line-height: 1.5;
@@ -594,6 +602,46 @@ section{
                     background-color: var(--purple-400);
                 }
             }
+        }
+
+        #card1{
+            background-color: transparent;
+            background: url("../image/project1.png");
+            backdrop-filter: blur(100px);
+            -webkit-backdrop-filter: blur(100px);
+
+            &:hover {
+                transform: scale(1.1);
+
+                @media (max-width:1024px) {
+                    padding: 0%;
+                    width: 100%;
+                }
+            }
+        }
+
+        #card2{
+            background-color: transparent;
+            background: url("../image/project2.png");
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        #card3{
+            background-color: transparent;
+            background: url("../image/project3.png");
+            color: var(--base-100);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        @media (max-width:1024px) {
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: center;
+            overflow: scroll;
         }
 
         @media (max-width:768px) {
@@ -615,198 +663,7 @@ section{
         overflow: hidden;
         overflow: scroll;
         scroll-behavior: smooth;
-    }
-
-    @media (max-width:600px) {
-        overflow: hidden;
-        overflow: scroll;
-        scroll-behavior: smooth;
-    }
-}
-
-.last-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 1%;
-    gap: 2rem;
-    padding-top: 2%;
-    height: 100vh;
-    padding: 0px 2%;
-
-
-    .last-title{
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: var(--base-800);
-        padding-bottom: 2%;
-        border-bottom: 1px solid var(--purple-100);
-        margin-top: 5%;
-    }
-
-    @media (max-width:768px) {
-        flex-direction: column;
-        overflow: hidden;
-        overflow: scroll;
-        scroll-behavior: smooth;
-    }
-
-    @media (max-width:600px) {
-        overflow: hidden;
-        overflow: scroll;
-        scroll-behavior: smooth;
-    }
-}
-
-.last-page{
-    display: flex;
-    height: 100vh;
-    padding-bottom: 5%;
-    gap: 3rem;
-
-    h1{
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: var(--purple-100);
-    }
-
-    .right-side{
-        margin-right: 1%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1%;
-        height: 70vh;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        .container{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            justify-content: center;
-            align-items: center;
-            padding: 5px;
-            
-            .club{
-                display: flex;
-                gap: 0.5rem;
-                flex-direction: column;
-                padding: 0.5%;
-                letter-spacing: 0.5px;
-                overflow: hidden;
-                scroll-behavior: smooth;
-                align-items: center;
-                text-align: center;
-                text-overflow: ellipsis;
-                justify-content: center;
-            }
-
-            h2{
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: var(--purple-100);
-                padding-bottom: 2%;
-            }
-
-            p{
-                font-size: 1rem;
-                color: var(--base-800);
-                font-weight: 500;
-                letter-spacing: 1px;
-                line-height: 1.5;
-                margin-bottom: 20px;
-            }
-
-            @media (max-width:768px) {
-                grid-template-columns: repeat(1, 1fr);
-                overflow: hidden;
-                overflow: scroll;
-                scroll-behavior: smooth;
-                gap: rem;
-            }
-        
-            @media (max-width:600px) {
-                grid-template-columns: repeat(1, 2fr);
-                grid-template-rows: ;
-                overflow: hidden;
-                overflow: scroll;
-                scroll-behavior: smooth;
-            }
-        }
-    }
-
-    /* Contact style */
-
-    .left-side{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
         padding: 2%;
-        border: 1px solid var(--purple-100);
-        height: 65vh;
-        border-radius: 5cap;
-        /* background-color: var(--base-800); */
-
-        h1{
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--base-800);
-        }
-
-        form{
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding: 1%;
-            height: 30vh;
-            color: var(--base-800);
-
-            .Input, textarea{
-                padding: 10px;
-                border-radius: 20px;
-                border: 1px solid var(--purple-100);
-                resize: none;
-            }
-
-            textarea {
-                min-height: 100px;
-            }
-
-            label{
-                font-size: 1rem;
-                color: var(--base-800);
-                font-weight: 500;
-                color: var(--base-800);
-            }
-
-            .btn{
-                margin-left: 30%;
-                border: none;
-                background-color: var(--purple-100);
-                color: var(--base-100);
-                padding: 10px 5px;
-                width: 100PX;
-                border-radius: 5cap;
-                text-decoration: none;
-                transition: background-color 0.3s ease;
-
-                &:hover{
-                    background-color: var(--purple);
-                }
-            }
-        }
-    }
-
-    @media (max-width:768px) {
-        flex-direction: column;
-        overflow: hidden;
-        overflow: scroll;
-        scroll-behavior: smooth;
     }
 
     @media (max-width:600px) {
@@ -814,7 +671,11 @@ section{
         overflow: scroll;
         scroll-behavior: smooth;
     }
-   
+
+    @media (max-width:1024px) {
+        height: 90vh;
+        justify-content: center;
+    }
 }
 
 footer{
@@ -823,8 +684,14 @@ footer{
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    width: 100%;
+
+
+
+    @media (max-width:1024px) {
+    }
     }
 
