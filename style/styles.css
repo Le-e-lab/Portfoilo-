@@ -81,6 +81,12 @@ header {
                 color: var(--base-100);
                 flex: 1;
 
+                &:hover{
+                    transform: scale(1.1);
+                    transition: transform 0.5s ease;
+                    color: var(--purple);
+                }
+
                 @media (max-width: 768px){
                     width: 100%;
                     text-align: center;
@@ -100,15 +106,19 @@ header {
             justify-content: center;
             align-items: center;
             text-align: center;
-            /* margin-left: 50%; */
             gap: 1rem; 
             left: 50%;
 
             li{
-                display: inline-block;
+                display: flex;
+                flex-direction: column;
                 gap: 3rem;
                 font-size: 1rem;
                 font-weight: bold;
+
+                @media (max-width:768px) {
+                    flex-direction: column;
+                }
 
             }
             .nav-links{
@@ -125,14 +135,22 @@ header {
                     margin-right: 10%;
                     gap: 1rem;
                 }
-
-                @media (max-width: 768px){
-                    display: none;
+                
+                @media (max-width:600px) {
+                    top: 100%;
+                    width: 100%;
+                    padding: 1rem;
+                    color: var(--base-800);
+                    display: flex;
+                    left: 10%;
+                    text-align: center;
+                
                 }
+
     
             }
 
-            .button{
+            .visit-btn{
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -149,9 +167,7 @@ header {
                     background: linear-gradient(to right, var(--blue), var(--purple-400));
                 } 
 
-                &:active{
-                    display: flex;
-                }
+                
 
                 @media (max-width:1024px){
                     display: none;
@@ -159,9 +175,39 @@ header {
 
                 @media (max-width: 768px){
                     display: none;
+                    flex-direction: column;
+                       
+                    }
+                }
+
+                @media (max-width: 600px){
+                    display: none;
+                    flex-direction: column;
+                    position: absolute; 
+                    top: 105px; 
+                    width: 100%;
+                    background-color: var(--base);
+                    width: 150px;
+                    box-shadow: 0px 4px 6px var(--base); 
+                    padding: 2% 4%;
+                    justify-content: center;
+                    left: 40% ;
+                    text-align: center;
+                    color: var(--base-800);
+                }
+                    
+                        &.active{
+                            display: block;
+                        }
                 }
             }
+
+            @media (screen-width: 768) {
+                gap: 1rem;
+            }
         }
+
+        
     .mobile-toggle{
         display: none;
         cursor: pointer;
@@ -169,20 +215,31 @@ header {
         color: var(--base-100);
         margin-right: 15px;
 
-        @media (max-width: 768px){
-            display:inline-block;
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px){
+            display:block;
 			position:absolute;
 			top:35px;
-			right:10px;
+			right:1px;
+            gap: 1rem;
         }
-    }
+        
 
-    @media (max-width: 1024px) {
-        align-items: center;
-        text-align: center;
-        }   
- }
-}
+        @media (max-width: 385px){
+            display:block;
+			position:absolute;
+			top:35px;
+			right:1px;
+            gap: 1rem;
+            left: 268px;
+        }
+
+    }
+   
+
 
 
 
@@ -243,7 +300,6 @@ section{
         }
 
         @media (max-width:768px) {
-            margin-left:2%;
             height: auto;
             width: 40%;
             margin-bottom: 1%;
@@ -340,8 +396,10 @@ section{
 
     @media (max-width:1024px){
         gap: 0;
-        height: 100vh;
-        margin-right: 10%;
+        margin-top: 20%;
+        height: auto;
+        padding-right:4% ;
+        /* margin-right: 10%; */
     }
 
     @media (max-width:768px) {
@@ -353,7 +411,7 @@ section{
 
     @media (max-width:600px) {
         flex-direction: column;
-        margin-top: 10%;
+        margin-top: 25%;
     }
 }
 
@@ -607,8 +665,6 @@ section{
         #card1{
             background-color: transparent;
             background: url("../image/project1.png");
-            backdrop-filter: blur(100px);
-            -webkit-backdrop-filter: blur(100px);
 
             &:hover {
                 transform: scale(1.1);

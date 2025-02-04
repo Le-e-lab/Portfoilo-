@@ -1,19 +1,24 @@
-const menuIcon = document.querySelector('#menu-icon');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".mobile-toggle");
+    const navLinks = document.querySelector("#menu");
 
-
-menuIcon.onclick = () => {
-    navLinks.classList.toggle('active');
-}
-// menuIcon.addEventListener('click', () => {
-//     navLinks.classList.toggle('active');
-// });
-
-let btnClick = document.querySelector('.visit-btn');g
-
-btnClick.addEventListener('click', () => {
-    window.location.href = "https://github.com/Le-e-lab?tab=repositories"
+    if (menuIcon && navLinks) {
+        menuIcon.onclick = () => {
+            navLinks.classList.toggle("active");
+        };
+    }
 });
+
+
+
+
+
+
+// let btnClick = document.querySelector('.visit-btn');g
+
+// btnClick.addEventListener('click', () => {
+//     window.location.href = "https://github.com/Le-e-lab?tab=repositories"
+// });
 
 // const downloadBtn = document.querySelector('#d-btn');
 // const fileLink = "id=109LRY3zNTwtNJSIhnPXnK6MJINX-3I52&export=download&authuser=0"
@@ -21,10 +26,3 @@ btnClick.addEventListener('click', () => {
 // downloadBtn.addEventListener('click', () => {
 //     window.location.href = fileLink
 // });
-
-function changeColor() {
-    const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
-    document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-}
-
-setInterval(changeColor, 2000);
