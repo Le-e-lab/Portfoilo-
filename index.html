@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <meta name="description" content="Portfolio website of Lesley Mutsambiwa, a Full-stack Developer skilled in JavaScript, React, Node.js, and more.">
+    <meta name="keywords" content="Lesley Mutsambiwa, Full-stack Developer, Portfolio, Web Developer, JavaScript, React, Node.js">
+    <title>Lesley Mutsambiwa</title>
     <link rel="stylesheet" href="style/styles.css">
     <script src="script.js"></script>
 </head>
@@ -14,7 +16,7 @@
                 <div class="logo">
                     <img src="image/f1.jpg" alt="L">
                 </div>
-                <div class="logo-text">Lesley Mutsambiwa</div>
+                <div class="logo-text">Lesley</div>
             </a>
             <ul id="menu">
                 <li><a href="#home" class="nav-links">Home</a></li>
@@ -37,9 +39,16 @@
             <span class="close-btn" onclick="closeContactForm()">&times;</span>
             <h2>Send a Message</h2>
             <form id="emailForm" action="https://formsubmit.co/mutsambiwalesley@gmail.com" method="POST">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone" placeholder="Your Phone Number">
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject" placeholder="Subject">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"  placeholder="Your Message" required></textarea>
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
                 <button type="submit">Send</button>
@@ -67,8 +76,8 @@
             </h4>
 
             <div class="btn-group">
-                <a href="./Lesley Mutsambiwa.pdf" class="button">Veiw Resume</a>
-                <li><a href="#" class="visit-btn" onclick="openContactForm()">Contact</a></li>
+                <a href="./Lesley Mutsambiwa.pdf" class="button">View Resume</a>
+                <a href="#" class="visit-btn" onclick="openContactForm()">Contact</a></li>
             </div>
 
             <div class="social">
@@ -119,8 +128,8 @@
                 </ul>
                 <h2>Certifications</h2>
                 <ul>
-                    <li>Certified: Responsive Web Design Certification (RCWDC) by Coursera</li>
-                    <li>Certified: JavaScript Fundamentals Certification (JSF) by Udacity</li>
+                    <li>Certified: CSS, Bootstrap, JavaScript and PHP Stack by Udemy</li>
+                    <li>Certified: Cyber Security by ISC2</li>
                 </ul>
              </div>
 
@@ -128,7 +137,8 @@
              <div class="right-column">
                 <h2>About Me</h2>
                 <p>I'm a software developer with a passion for creating engaging and user-friendly web applications.
-                     My background in computer science and programming has provided me with the skills and knowledge needed to build high-quality,
+                     My background in computer science and programming has
+                      provided me with the skills and knowledge needed to build high-quality,
                       responsive web applications.</p>
              </div>
         </div>
@@ -140,35 +150,29 @@
 
             <!-- Project column -->
             <div class="project" id="card1">
+                <img src="image/project1.png" alt="">
                 <h2>E-commence Website</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Sed viverra, turpis vel semper placerat, velit mauris
-                      faucibus velit, in consectetur ipsum diam at enim.
-                       Nulla facilisi. Sed semper, orci id mollis viverra,
-                        justo felis sodales ex, et cursus risus felis in
-                         velit.</p>
+                <p>A feature-rich e-commerce platform that enables users to browse products, add items to a cart,
+                     and complete secure transactions. Developed with React, Node.js, Express,
+                      and MongoDB, it includes user authentication, an admin dashboard, and a smooth checkout process.</p>
                 <a href="#" class="button">View Project</a>
             </div>
             
             <div class="project f2" id="card2">
+                <img src="image/project3.png" alt="">
                 <h2>Real-time Chat App</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Sed viverra, turpis vel semper placerat, velit mauris
-                      faucibus velit, in consectetur ipsum diam at enim.
-                       Nulla facilisi. Sed semper, orci id mollis viverra,
-                        justo felis sodales ex, et cursus risus felis in 
-                        velit.</p>
+                <p>A full-stack real-time chat application using Node.js,
+                     Express, Socket.io, and MongoDB. It allows users to send instant messages,
+                      supports multiple chat rooms, and features user authentication for a secure experience.</p>
                 <a href="#" class="button">View Project</a>
             </div>
 
             <div class="project f3" id="card3">
+                <img src="image/project2.png" alt="">
                 <h2>AI Chatbot</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Sed viverra, turpis vel semper placerat, velit mauris
-                      faucibus velit, in consectetur ipsum diam at enim.
-                       Nulla facilisi. Sed semper, orci id mollis viverra,
-                        justo felis sodales ex, et cursus risus felis in
-                         velit.</p>
+                <p>A smart AI-powered chatbot that uses natural language processing (NLP) to understand
+                     and respond to user queries in real-time. Built with Python and Node.js,
+                      it can handle customer support, FAQs, and personalized interactions.</p>
                 <a href="#" class="button">View Project</a>
             </div>
         </div>

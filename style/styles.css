@@ -9,12 +9,12 @@
 
 }
 :root {
-	--base: #555;
-	--base-100: #f1f1f1;
+	--base: #b8b8b8;
+	--base-100: #ffffff;
 	--base-400: #553;
 	--base-800: #000;
 	--purple: #cc00f5;
-	--purple-100: #7f058a;
+	--purple-100: #37083b;
 	--purple-400: #61004f;
 	--purple-800: #40023c;
 	--blue: #0a61ae;
@@ -25,12 +25,12 @@
 
 body {
     transition: background-color 1s ease;
+    background-color: var(--base);
 }
 
 header {
     padding-top:5px;
 	padding-bottom:5px;
-    color: var(--base-100);
     max-width: 80vw;
     margin-left: 11%;
     padding: 10px;
@@ -38,8 +38,8 @@ header {
     width: 100%;
     z-index: 999;
     top: 0;
-    background-color: var(--base-800);
-    border-radius: 10cap;
+    background-color: var(--base-100);
+    border-radius: 2cap;
     filter: blur(0px);
 
     .navbar{
@@ -64,7 +64,7 @@ header {
                 justify-content: center;
                 font-size: 1rem;
                 font-weight: bold;
-                color: var(--base-100);
+                color: var(--base-800);
                 background-color: var(--purple-100);
                 border-radius: 50%;
                 height: 64px;
@@ -84,7 +84,7 @@ header {
             .logo-text{
                 font-size: 1rem;
                 font-weight: bold;
-                color: var(--base-100);
+                color: var(--base-800);
                 flex: 1;
 
                 &:hover{
@@ -121,6 +121,7 @@ header {
                 gap: 3rem;
                 font-size: 1rem;
                 font-weight: bold;
+                color: var(--base-800);
 
                 @media (max-width:768px) {
                     flex-direction: column;
@@ -128,7 +129,7 @@ header {
 
             }
             .nav-links{
-                color: var(--base-100);
+                color: var(--base-800);
                 text-decoration: none;
                 transition: color 0.3s ease;
 
@@ -163,7 +164,7 @@ header {
                 width: 150px;
                 height: 50px;
                 background: linear-gradient(to right, var(--purple-400),var(--blue));
-                color: var(--base-100);
+                color: var(--base-800);
                 border-radius: 5cap;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
@@ -623,7 +624,7 @@ section{
     align-items: center;
     padding: 8% 4%;
     gap: 4rem;
-    height: 100vh;
+    height: auto;
 
     h1{
         border-bottom: 1px solid var(--purple-100);
@@ -647,27 +648,39 @@ section{
             gap: 0.5rem;
             border-radius: 5cap;
             transition: background-color 0.3s ease;
-            height: 50vh;
+            height: 75vh;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 2%;
             cursor: pointer;
 
+            &:hover{
+                transform: scale(1.02);
+                transform: translateY(-5%);
+                box-shadow: #181414;
+            }
+
             h2{
                 font-size: 1.5rem;
                 font-weight: bold;
-                color: var(--purple-100);
+                color: var(--base-800);
 
             }
 
             p{
                 font-size: 1rem;
-                color: var(--purple-100);
+                color: var(--base-800);
                 font-weight: 500;
                 letter-spacing: 1px;
                 line-height: 1.5;
                 margin-bottom: 20px;
+            }
+
+            img{
+                height: 200px;
+                object-fit: cover;
+                width: 80%;
             }
 
             .button{
@@ -684,38 +697,10 @@ section{
             }
         }
 
-        #card1{
-            background-color: transparent;
-            background: url("../image/project1.png");
+       
 
-            &:hover {
-                transform: scale(1.1);
-
-                @media (max-width:1024px) {
-                    padding: 0%;
-                    width: 100%;
-                }
-            }
-        }
-
-        #card2{
-            background-color: transparent;
-            background: url("../image/project2.png");
-
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-
-        #card3{
-            background-color: transparent;
-            background: url("../image/project3.png");
-            color: var(--base-100);
-
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
+       
+      
         @media (max-width:1024px) {
             grid-template-columns: repeat(1, 1fr);
             justify-content: center;
@@ -770,17 +755,17 @@ body::-webkit-scrollbar{
 .contact-form {
     display: none; 
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(176, 176, 176, 0.7);
     justify-content: center;
     align-items: center;
 }
 
 .form-container {
-    background: #222;
+    background: #464545;
     padding: 4%;
     border-radius: 5cap;
     text-align: center;
@@ -790,10 +775,16 @@ body::-webkit-scrollbar{
     gap: 1rem;
 }
 
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    text-align: left;
+}
+
 .contact-form h2{
     font-size: 2rem;
     font-weight: bold;
-    color: var(--purple-400);
+    color: var(--base-100);
     margin-bottom: 2%;
 }
 .contact-form input, .contact-form textarea {
@@ -807,7 +798,7 @@ body::-webkit-scrollbar{
 }
 
 .contact-form button {
-    background: var(--purple);
+    background: var(--base-800);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -821,7 +812,7 @@ body::-webkit-scrollbar{
 
 .close-btn {
     font-size: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     position: absolute;
     top: 110px;
