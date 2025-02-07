@@ -94,8 +94,8 @@ header {
                 }
 
                 @media (max-width: 768px){
-                    width: 100%;
-                    text-align: center;
+                    width: 80%;
+                    text-align: left;
                 }
             }
 
@@ -556,9 +556,7 @@ section{
             margin-bottom: 20px;
 
             @media (max-width:768px) {
-                font-size: 0.8rem;
-                font-weight: 500;
-                line-height: 1;
+                font-size: 0.9rem;
             }
 
             @media (max-width:600px) {
@@ -590,8 +588,6 @@ section{
     @media (max-width:1024px) {
         padding: 0;
         gap: 0;
-        overflow: hidden;
-        overflow: scroll;
         scroll-behavior: smooth;
         scrollbar-width: none;
         height: 80vh;
@@ -602,17 +598,11 @@ section{
         padding: 5%;
         margin-bottom: 5%;
         padding-bottom: 5%;
-        scrollbar-width: none;
 
     }
 
     @media (max-width:600px) {
         margin-bottom: 5%;
-        padding-bottom: 5%;
-        overflow: hidden;
-        overflow: scroll;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
 
     }
     
