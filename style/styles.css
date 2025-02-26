@@ -9,18 +9,18 @@
 
 }
 :root {
-	--base: #b8b8b8;
+	--base: #161313;
 	--base-100: #ffffff;
 	--base-400: #553;
-	--base-800: #000;
-	--purple: #cc00f5;
-	--purple-100: #37083b;
-	--purple-400: #61004f;
-	--purple-800: #40023c;
+	--base-800: #f9f5f5;
+	--purple: purple;
+	--purple-100:  purple;
+	--purple-400: purple;
+	--purple-800: purple;
 	--blue: #0a61ae;
-	--blue-100: #e2f8ff;
-	--blue-400: #61dafb;
-	--blue-800: #0a61ae;
+	--blue-100: purple;
+	--blue-400: purple;
+	--blue-800: purple;
 }
 
 body {
@@ -38,7 +38,7 @@ header {
     width: 100%;
     z-index: 999;
     top: 0;
-    background-color: var(--base-100);
+    background-color: transparent;
     border-radius: 2cap;
     filter: blur(0px);
 
@@ -79,6 +79,10 @@ header {
                     width: 100%;
                     border-radius: 100%;
                 }
+
+                @media (max-width: 600px){
+                    display: none;
+                }
             }
 
             .logo-text{
@@ -96,6 +100,10 @@ header {
                 @media (max-width: 768px){
                     width: 80%;
                     text-align: left;
+                }
+
+                @media (max-width: 600px){
+                    display: none;
                 }
             }
 
@@ -351,7 +359,7 @@ section{
             align-items: center;
 
             .visit-btn{
-                background-color: var(--base-800);
+                background-color: purple;
                 color: var(--base-100);
                 padding: 10px 20px;
                 border-radius: 5cap;
@@ -366,7 +374,7 @@ section{
             }
 
             .button{
-                background-color: var(--base-800);
+                background-color: purple;
                 color: var(--base-100);
                 padding: 10px 20px;
                 border-radius: 5cap;
@@ -674,7 +682,7 @@ section{
             }
 
             .button{
-                background-color: var(--base-800);
+                background-color: purple;
                 color: var(--base-100);
                 padding: 10px 20px;
                 border-radius: 5cap;
